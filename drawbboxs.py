@@ -1,6 +1,11 @@
 import cv2
 
 def drawBoundingBox(img, bboxs):
+    '''
+    img: 3 channel image
+    bboxs: List of dict, [bbox1, bbox2, ...bboxn]
+    bbox1 = { 'x1':, 'x2':, 'y1':, 'y2':, 'label', }
+    '''
     for box in bboxs:
         x1,y1,x2,y2 = (box['x1'], box['y1'], box['x2'], box['y2'])
         label = box['label']
