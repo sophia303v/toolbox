@@ -2,6 +2,9 @@ from skimage.measure import label as sk_label
 from skimage.measure import regionprops as sk_regions
 
 def segtodet(segmap, _label):
+  '''
+  extract bbox from segmentation map
+  '''
   sk_mask = sk_label(segmap)
   regions = sk_regions(sk_mask)
   bboxs = []
