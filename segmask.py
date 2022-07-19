@@ -1,17 +1,14 @@
-# sample data
-img = np.full((10,10,3), 128, np.uint8)
+"""
+Ref: https://learnopencv.com/deep-learning-based-object-detection-and-instance-segmentation-using-mask-rcnn-in-opencv-python-c/
+"""
 
-# sample mask
-mask = np.zeros((10,10), np.uint8)
-mask[3:6, 3:6] = 1
+def draw_mask(img, mask, color, alpha=0.3, beta=0.7):
+    """
+    img: numpy array
+    mask: 2d numpy array with binary value 0 & 1
+    color: ex: [0, 255, 0]
+    """
+    roi = img[mask==1]
+    img[mask==1] = (  [alpha* color[0], alpha*color[1], alpha* color[2]] + beta * roi)
 
-# color to fill
-color = np.array([0,255,0], dtype='uint8')
-
-# equal color where mask, else image
-# this would paint your object silhouette entirely with `color`
-masked_img = np.where(mask[...,None], color, img)
-
-# use `addWeighted` to blend the two images
-# the object will be tinted toward `color`
-out = cv2.addWeighted(img, 0.8, masked_img, 0.2,0)
+    return img
