@@ -1,2 +1,2 @@
 # toolbox
-The code here is utility I often use.
+The utility code I often use.
