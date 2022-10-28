@@ -1,3 +1,8 @@
+"""
+Extract bbox from segmentation map. 
+(Convert seg map to bbox)
+"""
+
 from skimage.measure import label as sk_label
 from skimage.measure import regionprops as sk_regions
 
