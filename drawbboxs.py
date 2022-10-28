@@ -1,3 +1,6 @@
+"""
+draw bbox to img
+"""
 import cv2
 
 def drawBoundingBox(img, bboxs):
