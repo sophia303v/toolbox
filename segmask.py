@@ -1,4 +1,5 @@
 """
+Draw segmentation mask on image.
 Ref: https://learnopencv.com/deep-learning-based-object-detection-and-instance-segmentation-using-mask-rcnn-in-opencv-python-c/
 """
 
