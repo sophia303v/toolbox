@@ -1,5 +1,5 @@
 """
-  Read csv files in & write out using python standard library
+  Read csv files in & write out using python standard library.
 """
 
 import csv
