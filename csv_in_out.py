@@ -1,3 +1,7 @@
+"""
+  Read csv files in & write out using python standard library
+"""
+
 import csv
 
 infile = "file"
