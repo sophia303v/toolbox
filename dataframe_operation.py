@@ -1,4 +1,4 @@
-# change the image_path of dataframe
+# change the image paths of dataframe
 
 dataset_dir = 'somepath'
 
