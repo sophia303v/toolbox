@@ -5,7 +5,7 @@ Ref: https://learnopencv.com/deep-learning-based-object-detection-and-instance-s
 
 def draw_mask(img, mask, color, alpha=0.3, beta=0.7):
     """
-    img: numpy array
+    img: numpy array (3d)
     mask: 2d numpy array with binary value 0 & 1
     color: ex: [0, 255, 0]
     """
